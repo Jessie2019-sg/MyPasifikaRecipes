@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Master.css">
+    <link rel="stylesheet" href="Home.css"> <!-- Create this CSS file for home-specific styles -->
+    <link rel="stylesheet" href="AdminLogin.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="topnav">
+        <img class="img" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Logo">
+        <a class="style1" href="Home.html">Home</a>
+        
+        <!-- Recipe Dropdown -->
+        <div class="dropdown">
+            <a href="Recipe.html" class="dropbtn">Recipe</a>
+            <div class="dropdown-content">
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+                <a href="#">Dinner</a>
+                <a href="#">Dessert</a>
+                <a href="#">Snacks</a>
+            </div>
+        </div>
+        
+        <a href="Review.html">Review</a>
+        
+
+  <!-- Admin Button -->
+  <button id="adminBtn">Admin Login</button>
+
+  <!-- Popup Form -->
+  <div id="loginPopup" class="popup">
+      <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>Admin Login</h2>
+          <!-- Form sends data to admin-login.php -->
+          <form action="AdminLogin.php" method="POST">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" required>
+
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" required>
+
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+
+              <button type="submit">Login</button>
+          </form>
+      </div>
+  </div>
+
+  <script src="AdminLogin.js"></script>
+  <button id="editBtn">Edit</button>
+
+
+
+        <form class="search-container" action="C:\Users\Jessica Nakaora>php -v
+'php' is not recognized as an internal or external command,
+operable program or batch file." method="GET">
+            <input type="text" name="query" class="search-box" placeholder="Search recipes..." required>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </nav>
+
+    <!-- Content Area -->
+    <section class="content">
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/images.1.jpg" alt="Slide 1">
+                <div class="text">Caption 1</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/images.2.jpg" alt="Slide 2">
+                <div class="text">Caption 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Images/Kiribati Palusami.jpg" alt="Slide 3" >
+                <div class="text">Caption 3</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- Your other content goes here -->
+        <div class="text-content">
+            <!-- Text content aligned to the top-left -->
+            <h1>Welcome to Our Recipe Site</h1>
+            <p>Discover delicious recipes from around the world.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            &copy; 2024 Pasifika Recipe. All rights reserved.
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="Home.js"></script> <!-- Create this JS file for slideshow functionality -->
+</body>
+</html>
