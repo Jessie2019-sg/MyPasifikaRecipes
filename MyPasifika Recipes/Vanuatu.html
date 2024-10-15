@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Pacifika Recipe - Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="RecipeStructure.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">My Pacifika Recipe</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="Home.html">Home</a>
+                        <div class="dropdown">
+                            <a href="#" id="adminBtn">Admin Login</a> <!-- Admin button -->
+                        </div>
+                    </li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="Review.html">Review</a></li>
+                </ul>
+            </nav>
+            <!-- Search Bar Section -->
+            <div class="search">
+                <form action="Search.php" method="GET">
+                    <input type="text" placeholder="Search recipes..." name="query" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="grid-container">
+        <div class="header">
+          <h2> Treat Yourself By Pasifika ~</h2>
+        </div>
+        
+        <div class="left" style="background-color:#aaa;">
+            <h4 style="text-align: center;"> Categories: </h4>
+            <ul style="list-style-type: none;">
+                <li> Cook Islands </li>  
+                <li> Fiji </li> 
+                <li> Kiribati </li> 
+                <li> Marshall Islands </li> 
+                <li> Nauru </li> 
+                <li> Niue </li> 
+                <li> Samoa </li> 
+                <li> Solomon Islands </li> 
+                <li> Tokelau </li> 
+                <li> Tonga </li> 
+                <li> Tuvalu </li> 
+                <li> Vanuatu </li> 
+                <li>submit recipes </li>
+            </ul>
+        </div>
+        
+        <div class="middle" style="background-color:#bbb;">
+            <h2 class="h2">Kava Muffins</h2>
+            <div id="myDIV">
+                <div class="p1">
+                    Ingredients:
+                    <p>
+                        <ul>
+                            <li>2 cup flour</li>
+                            <li>¾ cup cane sugar</li>
+                            <li>½ cup Cocoa powder</li>
+                            <li>½ tspn salt </li>
+                            <li>2 eggs at room temperature</li>
+                            <li>1/3 cup coconut cream</li>
+                            <li>1 2/3 cup Kava water: 200-300 grams of kava powder sieved in 2 cups of water (strength of kava to preference)</li>
+                            <li>1 Grated namambe (Tahitian chestnut) in flakes</li>
+                            <li>Some honey</li>
+                        </ul>
+                    </p>
+                    Instructions:
+                    <ul>
+                        <li>1. Pre-heat oven to 280-degree C.</li>
+                        <li>2. Sift flour, salt, and cocoa powder into a bowl.</li>
+                        <li>3. In another bowl, mix all liquid ingredients including eggs. Pour into dry ingredients and mix thoroughly until all ingredients are fully combined.</li>
+                        <li>4. Grease muffins pan and place muffin cups inside. Pour mixture equally into cups.</li>
+                        <li>5. Toss grated namambe flakes in honey and sprinkle on top of muffins.</li>
+                        <li>6. Place tray in the center of the oven and bake for 15 minutes or when skewer comes out clean.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="right" style="background-color:#ccc;">
+            <h3 style="text-align: center;">Shopping List</h3>
+            <p>This is the image of the relevant recipe</p>
+            
+            <button class="button button2" id="shopButton"> Shop for ingredients </button> <br/>
+            <script>
+                // Show/Hide Shopping List when button is clicked
+                document.getElementById("shopButton").addEventListener("click", function() {
+                    var shoppingListContainer = document.getElementById("shoppingListContainer");
+                    
+                    // Toggle display
+                    if (shoppingListContainer.style.display === "none") {
+                        shoppingListContainer.style.display = "block";
+                        
+                        // Fetch shopping list items via AJAX (you can replace this with a real API)
+                        fetch('ShoppingList.php')
+                        .then(response => response.text())
+                        .then(data => {
+                            // Insert data into shopping list
+                            document.getElementById("shoppingList").innerHTML = data;
+                        });
+                    } else {
+                        shoppingListContainer.style.display = "none";
+                    }
+                });
+            </script>
+            <div id="shoppingListContainer" style="display:none;">
+                <h4>Your Shopping List:</h4>
+                <ul id="shoppingList">
+                    
+                    <!-- Shopping list content will be populated here -->
+                </ul>
+            </div>
+
+            <div>
+                <img class="img1" src="paris.jpg" alt="breakfast" />
+            </div>
+        </div>
+    </div>
+      
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+        </div>
+    </footer>
+    
+   
+</body>
+</html>

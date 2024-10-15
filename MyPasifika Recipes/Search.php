@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 $query = $_GET['query'];
 
 // Define an array of website files to search through
-$files = ['Home.html', 'Review.html', 'RecipeSubmission.html'];
+$files = ['Home.html', 'Recipes.html','Review.html', 'RecipeSubmission.html'];
 
 // Initialize an array to hold the search results
 $results = [];

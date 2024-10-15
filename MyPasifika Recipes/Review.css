@@ -1,8 +1,12 @@
-
-.container {
+body {
+  margin: 0; /* Reset margin for body */
+  padding: 0; /* Reset padding for body */
+}
+.Revcontainer {
     padding: 20px;
     max-width: 900px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
+    margin-top: 10%;
   }
   
   .two-column-form {

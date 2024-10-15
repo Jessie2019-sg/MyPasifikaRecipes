@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Pacifika Recipe - Home</title>
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="shoppinglist.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -13,13 +15,24 @@
         <div class="container">
             <h1 class="logo">My Pacifika Recipe</h1>
             <nav>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Recipes</a></li>
+                <ul class="nav">
+                    <li><a href="Home.html">Home</a>
+                        <div class="dropdown">
+                            <a href="#" id="adminBtn">Admin Login</a> <!-- Admin button -->
+                        </div>
+                    </li>
+                    <li><a href="Recipes.html">Recipes</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Review</a></li>
+                    <li><a href="Review.html">Review</a></li>
                 </ul>
             </nav>
+             <!-- Search Bar Section -->
+        <div class="search">
+            <form action="Search.php" method="GET">
+                <input type="text" placeholder="Search recipes..." name="query" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
         </div>
     </header>
 
@@ -28,9 +41,28 @@
         <div class="hero-content">
             <h2>Discover Authentic Pacific Cuisine</h2>
             <p>Explore recipes from across the Pacific islands and bring the flavors of the ocean to your kitchen.</p>
-            <a href="#" class="cta-btn">Explore Recipes</a>
+            <a href="#" class="cta-btn">Explore Recipes</a> <!-- This button will remain outside the popup -->
         </div>
     </section>
+
+    <!-- Popup Form -->
+    <div id="loginPopup" class="popup" style="display: none;"> <!-- Initially hidden -->
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Admin Login</h2>
+            <form method="POST" action="AdminLogin.php"> <!-- Adjust action as needed -->
+                <label for="email">Email</label>
+                <input type="email" name="email" required placeholder="Email">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" required placeholder="Password">
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="AdminLogin.js"></script>
 
     <!-- Featured Recipes Section -->
     <section class="featured-recipes">
@@ -38,16 +70,17 @@
             <h3>Featured Recipes</h3>
             <div class="recipe-grid">
                 <div class="recipe-item">
+                    <img src="Images/IMG-fa61e73bd44ffae35f0222cede170f8d-V.jpg" alt="Palusami (Samoan Taro Leaves)" style="width:100%; border-radius: 10px;">
                     <h4>Kokoda (Fijian Ceviche)</h4>
                     <p>A fresh and zesty dish made with marinated fish, coconut milk, and lime.</p>
                 </div>
                 <div class="recipe-item">
-                    <img src="palusami.png" alt="Palusami (Samoan Taro Leaves)" style="width:100%; border-radius: 10px;">
+                    <img src="Images/Kiribati Palusami.jpg" alt="Palusami (Samoan Taro Leaves)" style="width:100%; border-radius: 10px;">
                     <h4>Palusami (Taro Leaves in Coconut Cream)</h4>
                     <p>A traditional Samoan dish with taro leaves cooked in creamy coconut milk.</p>
                 </div>
                 <div class="recipe-item">
-                    <img src="POI.png" alt="Poi (Hawaiian Taro)" style="width:100%; border-radius: 10px;">
+                    <img src="Images/Samoan Sapa sui.jpg" alt="Poi (Hawaiian Taro)" style="width:100%; border-radius: 10px;">
                     <h4>Poi (Hawaiian Taro)</h4>
                     <p>A staple Polynesian food made from taro root, known for its smooth and unique flavor.</p>
                 </div>
@@ -63,3 +96,4 @@
     </footer>
 </body>
 </html>
+*

@@ -1,59 +1,49 @@
-/* General styling remains the same */
-
 body {
-    background-image: url("images/Background.Review.jpg"); /* Set the background image */
-    background-size: cover; /* Scale the image to cover the entire page */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: scroll; /* Keeps the background fixed when scrolling */
-    margin: 0; /* Remove default margin */
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.topnav {
-    display: flex;
-    align-items: center;
-    background-color: #A0522D;
-    height: 100px;
-    padding: 0 20px;
-    overflow: visible; /* Ensure the dropdown is not clipped */
-    flex-wrap: wrap;
-  }
+
+.featured-recipes {
+  margin-top: 20px; /* Push down for the navbar */
+  padding: 5px 0;
+  background-color: #fff;
+}
+
+.Reccontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 20px;
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    max-height: 300px; /* Limit the height to prevent it from being too tall */
-    overflow-y: auto; /* Add scroll if there are too many options */
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #ddd;
-    color: black;
-  }
-  
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-image {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.category-image:hover {
+  transform: scale(1.05);
+}

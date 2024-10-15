@@ -8,10 +8,11 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f0f8ff;
+  padding-top: 80px; /* Ensure this matches the height of your header */
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: auto;
   max-width: 1200px;
 }
@@ -46,6 +47,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-left: 20px;
+  position: relative; /* Needed for dropdown positioning */
 }
 
 nav ul li a {
@@ -57,14 +59,76 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Adjustments to avoid hero section overlapping */
-body {
-  padding-top: 80px; /* Adds space so content doesn't get hidden behind the fixed header */
+/* Dropdown Styles */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px; /* Set a minimum width for dropdown */
 }
+
+nav ul li:hover .dropdown {
+  display: block; /* Show the dropdown on hover */
+}
+
+.dropdown a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space out logo, nav, and search bar */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Space between nav items */
+  flex-grow: 1; /* Allow nav to take available space */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-left: auto; /* Push search bar to the right */
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Space between input and button */
+  width: 250px; /* Adjust width as needed */
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #ff6600; /* Match with submit button theme */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #8b4513; /* Darken on hover */
+}
+
 
 /* Hero Section Styling */
 .hero {
-  background: url('pacific-banner.jpg') no-repeat center center/cover;
+  background: url('Images/IMG-90942ff9d654b9028e1565237179ef66-V.jpg') no-repeat center center/cover;
   color: white;
   height: 90vh;  /* Adjust height to ensure it doesn’t overtake the whole screen */
   display: flex;

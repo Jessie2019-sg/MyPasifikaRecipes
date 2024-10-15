@@ -1,28 +1,25 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// Get the modal
+const loginPopup = document.getElementById("loginPopup");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+// Get the button that opens the modal
+const adminBtn = document.getElementById("adminBtn");
+
+// Get the <span> element that closes the modal
+const closeBtn = document.getElementsByClassName("close-btn")[0];
+
+// When the user clicks the button, open the modal 
+adminBtn.onclick = function() {
+    loginPopup.style.display = "block";
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
+    loginPopup.style.display = "none";
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === loginPopup) {
+        loginPopup.style.display = "none";
+    }
 }
