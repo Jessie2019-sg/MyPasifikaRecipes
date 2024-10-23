@@ -1,0 +1,49 @@
+.review-container {
+  padding: 20px;
+  max-width: 900px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+  margin-top: 10%;
+}
+
+.review-columns {
+  display: flex;
+  gap: 20px; /* Space between the two columns */
+}
+
+.left-column,
+.right-column {
+  flex: 1; /* Each column takes up equal space */
+}
+
+h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.review-box {
+  background-color: #f1f1f1; /* Light gray background for review boxes */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating-box {
+  background-color: #f7f7f7; /* Lighter background for rating boxes */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: right; /* Align the star ratings to the right */
+}
+
+.review-box p,
+.rating-box p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .review-columns {
+      flex-direction: column; /* Stack columns on smaller screens */
+  }
+}

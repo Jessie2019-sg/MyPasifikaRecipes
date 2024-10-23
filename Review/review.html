@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Review.css">
+    <title>Submit Review</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light background */
+        }
+
+        header {
+            background-color: #343a40; /* Dark header */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .Revcontainer {
+            padding: 20px;
+            max-width: 600px; /* Adjust as needed */
+            margin: 50px auto; /* Center the container */
+            background-color: white; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .two-column-form {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            gap: 15px; /* Space between elements */
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding doesn’t increase width */
+        }
+
+        textarea {
+            height: 100px; /* Adjust as needed */
+            resize: vertical; /* Allows the user to resize vertically */
+        }
+
+        .star-rating {
+            display: flex;
+            direction: rtl; /* Right to left so that higher stars come first */
+            justify-content: flex-start; /* Align stars to the left */
+        }
+
+        .star-rating input {
+            display: none; /* Hide the actual radio input */
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .star-rating input:checked ~ label {
+            color: #f5a623; /* Gold color for the selected star */
+        }
+
+        .star-rating input:hover ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f5a623; /* Change star color on hover */
+        }
+
+        .submit-button {
+            background-color: #A0522D;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px; /* Space above the button */
+        }
+
+        .submit-button:hover {
+            background-color: #8b4513;
+        }
+
+        footer {
+            background-color: #343a40; /* Dark footer */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative; /* Ensuring footer is at the bottom */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">My Pasifika Recipe</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="Review.html">Submit Review</a></li>
+                <li><a href="viewReview.html">View Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Revcontainer">
+        <h2>Submit Your Review</h2>
+        <form class="two-column-form" id="reviewForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <label>Rating:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" title="5 stars">★</label>
+                
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars">★</label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars">★</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars">★</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star">★</label>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            &copy; 2024 Pasifika Recipe. All rights reserved.
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="Review.js"></script>
+</body>
+</html>
