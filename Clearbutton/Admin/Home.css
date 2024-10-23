@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f8ff;
+  padding-top: 80px; /* Ensure this matches the height of your header */
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Header Styling */
+header {
+  background-color: #006699;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures header is above other sections */
+}
+
+.logo {
+  float: left;
+  font-family: 'Pacifico', cursive; /* Apply relaxed, cursive font */
+  font-size: 2.5em; /* Increase font size for emphasis */
+  color: #fff; /* Keep text white */
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative; /* Needed for dropdown positioning */
+  border-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  border-style: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px; /* Set a minimum width for dropdown */
+}
+
+nav ul li:hover .dropdown {
+  display: block; /* Show the dropdown on hover */
+}
+
+.dropdown a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space out logo, nav, and search bar */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Space between nav items */
+  flex-grow: 1; /* Allow nav to take available space */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-left: 0%; /* Push search bar to the right */
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5%; /* Space between input and button */
+  width: 100%; /* Adjust width as needed */
+  float: right;
+  margin-left: 200%
+}
+
+.search-bar button {
+ 
+  background-color: #ff6600; /* Match with submit button theme */
+  color: white; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  z-index: 2;
+  margin-left: 200%
+}
+
+.search-bar button:hover {
+  background-color: #8b4513; /* Darken on hover */
+}
+
+
+/* Hero Section Styling */
+.hero {
+  background: url('Images/IMG-90942ff9d654b9028e1565237179ef66-V.jpg') no-repeat center center/cover;
+  color: white;
+  height: 90vh;  /* Adjust height to ensure it doesn’t overtake the whole screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 3em;
+  font-family: 'Pacifico', cursive;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.cta-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.cta-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Featured Recipes Section */
+.featured-recipes {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.featured-recipes h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Pacifico', cursive;
+}
+
+.recipe-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.recipe-item h4 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.recipe-item p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Footer Section */
+footer {
+  background-color: #006699;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  text-decoration-color: #ccc;
+}
+

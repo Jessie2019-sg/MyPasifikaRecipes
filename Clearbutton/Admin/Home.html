@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Pacifika Recipe - Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            
+            <nav>
+                <ul class="nav">
+                    <h1 class="logo">My Pacifika Recipe</h1>
+                    <li><a href="Home.html">Home</a>
+                        <div class="dropdown">
+                            <a href="#" id="adminBtn">Admin Login</a> <!-- Admin button -->
+                        </div>
+                    </li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="Review.html">Review</a></li>
+                
+          
+             <!-- Search Bar Section -->
+        <div class="search-bar">
+           <form action="Search.php" method="GET">
+                <input type="text" placeholder="Search recipes..." name="query" required>
+               <button type="submit">Search</button>
+            </form>
+        </div>
+    </ul>
+    </nav>
+        </div>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Authentic Pacific Cuisine</h2>
+            <p>Explore recipes from across the Pacific islands and bring the flavors of the ocean to your kitchen.</p>
+            <a href="#" class="cta-btn">Explore Recipes</a> <!-- This button will remain outside the popup -->
+        </div>
+    </section>
+
+    <!-- Popup Form -->
+ <!-- Popup Form -->
+ <div id="loginPopup" class="popup" style="display: none;"> <!-- Initially hidden -->
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Admin Login</h2>
+        <form method="POST" action="AdminLogin.php"> <!-- Adjust action as needed -->
+            <label for="email">Email</label>
+            <input type="email" name="email" required placeholder="Email">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" required placeholder="Password">
+
+            <button type="submit">Login</button>
+           
+        </form>
+    
+        </div>
+    </div>
+
+    <script src="AdminLogin.js"></script>
+    <script src="Home.js"></script>
+
+    <!-- Featured Recipes Section -->
+    <h3 style="text-align: center;"> Featured Recipes </h3>
+    <section class="featured-recipes">
+        <div class="container">
+            <div class="recipe-grid">
+                <div class="recipe-item">
+                    <img src="Images/Fijian Cuisine Kokonda.jpg" alt="Fijian Cuisine Kokonda" style="width:100%; border-radius: 10px;">
+                    <h4>Kokoda (Fijian Ceviche)</h4>
+                    <p>A fresh and zesty dish made with marinated fish, coconut milk, and lime.</p>
+                </div>
+                <div class="recipe-item">
+                    <img src="Images/Samoan Palusami.jpg" alt="Palusami (Samoan Taro Leaves)" style="width:100%; border-radius: 10px;">
+                    <h4>Palusami (Taro Leaves in Coconut Cream)</h4>
+                    <p>A traditional Samoan dish with taro leaves cooked in creamy coconut milk.</p>
+                </div>
+                <div class="recipe-item">
+                    <img src="Images/IMG-fa61e73bd44ffae35f0222cede170f8d-V.jpg" alt="Poi (Hawaiian Taro)" style="width:100%; border-radius: 10px;">
+                    <h4>Poi (Hawaiian Taro)</h4>
+                    <p>A staple Polynesian food made from taro root, known for its smooth and unique flavor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+            <p><a href="https://www.facebook.com/profile.php?id=61566357703217"></a>Facebook</p>
+            <p><a href=""></a>Instagram</p>
+            <p><a href=""></a>Twitter</p>
+        </div>
+    </footer>
+</body>
+</html>

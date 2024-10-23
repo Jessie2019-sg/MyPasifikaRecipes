@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .welcome-message {
+    color: #ff6600;
+    text-align: center;
+    font-size: 24px; /* Increase font size for visibility */
+    margin-top: 5%; /* Add some space above */
+}
+
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 31.33%;
+    padding: 5px;
+    border:groove;
+    margin-left:21px;
+    margin-top:10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+  
+
+ 
+  
+  
+  
