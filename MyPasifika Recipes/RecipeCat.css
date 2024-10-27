@@ -1,0 +1,48 @@
+/* Inline styles for simplicity */
+body {
+    font-family: Arial, sans-serif;
+}
+.thumbnail-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 10px; /* Padding for the container */
+    margin: 20px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 5px; /* Optional border radius */
+    position: relative; /* For positioning */
+}
+.thumbnail {
+    flex: 0 0 auto; /* Prevent thumbnails from shrinking */
+    width: 200px; /* Fixed width for thumbnails */
+    height: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin-right: 10px; /* Space between thumbnails */
+}
+.thumbnail img {
+    width: 100%; /* Make images responsive */
+    height: 50%;
+}
+.thumbnail-description {
+    padding: 10px;
+}
+.thumbnail a {
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.category-row {
+    margin-top: 20px; /* Adjusts space between rows */
+}
+
+

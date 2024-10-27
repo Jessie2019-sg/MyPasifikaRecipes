@@ -1,0 +1,71 @@
+/* Ensure full height of page */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main content container expands to take available space */
+  .thumbnail-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Centers the content vertically if there are no search results */
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #006699;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  /* Other styles */
+  .search-title {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .thumbnail {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .thumbnail-description {
+    margin-top: 10px;
+  }
+  
+  .thumbnail-description h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .thumbnail-description p {
+    font-size: 14px;
+    color: #555;
+  }
+  

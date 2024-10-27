@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Pacifika Recipe - Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="RecipeStructure.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+    
+<div class="grid-container">
+<div class="header">
+</div>
+        
+<div class="left" >
+<h4> Categories: </h4>
+<ul>
+<li><a href="Cook Island.html">Cook Islands</a></li>
+<li><a href="Fiji.html">Fiji</a></li>
+<li><a href="Kiribati.html">Kiribati</a></li>
+<li><a href="Marshall Islands.html">Marshall Islands</a></li>
+<li><a href="Nauru.html">Nauru</a></li>
+<li><a href="Niue.html">Niue</a></li>
+<li><a href="Samoa.html">Samoa</a></li>
+<li><a href="Solomon Islands.html">Solomon Islands</a></li>
+<li><a href="Tonga.html">Tonga</a></li>
+<li><a href="Tuvalu.html">Tuvalu</a></li>
+<li><a href="Vanuatu.html">Vanuatu</a></li>
+<li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+</ul>
+</br>
+<a href="SubmitRecipe.php" class="cta-btn">Share Recipes</a>
+</div>
+            
+<div class="grid-container" style = "margin-top: 2%;" >
+<div class="middle" style="background-color:#bbb;">
+<h2 class="h2">Cook Islands potato salad </h2>
+<div id="myDIV">
+<div class="p1">
+<h4>Ingredients:</h4>
+<p>
+<h5>The Salad</h5>
+<ul>
+<li>7 medium to large potatoes (I prefer to use Agria potatoes)</li>
+<li>5 hard boiled eggs</li>
+<li>1 cup mixed vegetables</li>
+<li>400 g of drained canned beetroot slices</li>
+<li>100 g Chow Chow</li>
+<li>Salt to taste</li>
+</br>
+<p>
+    <h5>The Dressing</h5>
+    <ul>
+    <li>1 whole egg</li>
+   <li>5 egg yolks</li>
+   <li>1 litre salad & cooking oil (it's best to use a very light oil)</li>
+   <li>1 tablespoon Dijon mustard</li>
+   <li>white vinegar or freshly squeezed lemon juice (to taste)</li>
+<li>salt (to taste)</li>
+    </br>
+</p>
+</br>
+<h4>Instructions:</h4>
+<h5>The Salad</h5>
+<ul>
+<li>1.	Using a large pot or stock pot, bring water to a boil. Add a generous amount of salt (like when cooking potato mash) and add the 7 potatoes WHOLE and WITH THE SKINS ON. Cook for approximately 35 minutes or until it is cooked but firm enough that it won’t mash up.</li>
+<li>2.	While the potatoes are cooking, in a smaller pot, bring your eggs to the boil together with your mixed veges. (Or you can use 2 small, separate pots - its up to you). No need to add any salt at this step. </li>
+<li>3.	Once cooked, drain the mixed vegetables, peel the eggs then set them aside to cool.</li>
+<li>4.	When the potatoes are ready, let them cool enough to handle with a tea towel, then peel potato skins. I’ve been taught to use a butter knife to carefully pull away the skin while the potato is still quite warm. </li>
+<li>5.	Dice the potatoes into 1 ½ cm cubes and set aside to cool. Remember, the potatoes continue to cook well after they are drained so it is important not to over cook them.</li>
+</br>
+<h5>The Dressing</h5>
+<ul>
+<li>1.	Add the whole egg with the egg yolks into a large bowl and whisk using an electric egg beater until it thickens and is light in texture.</li>
+<li>2.	Mix in the dijon mustard, then while stills whisking, slowly drizzle in the oil. This takes time and practice so don’t rush it. You wouldn’t want the eggs and oil to separate. </li>
+<li>3.	Whisk in the vinegar or lemon and the salt, until it meets your taste.</li>
+</ul>
+</br>
+<h5>Assemble the Salad</h5>
+<ul>
+<li>1.	Now that all the ingredients have cooled, add the diced potatoes to a large mixing bowl.</li>
+<li>2.	Dice the sliced beetroot into pieces that are similar in the size to the mixed vegetables; add the beetroot to the bowl of potatoes.</li>
+<li>3.	Add the now cooked (and cooled) mixed vegetables plus the chow chow.</li>
+<li>4.	Grate 2 eggs on to the rest of the ingredients then carefully combine everything together. </li>
+<li>5.	Add approximately ½ to 1 cup of the freshly made mayonnaise dressing to the potato mixture until the entire salad is evenly coated. Save some mayonnaise to dress the top of the salad. </li>
+<li>6.	The flavour from here is up to you. Taste the salad and add more salt, mayonnaise or any other ingredient until it's perfect, to you. </li>
+<li>7.	Pour the salad mixture onto a tray and carefully smooth down the potatoes over with a spoon, until the mound of salad looks like an upside-down bowl.</li>
+<li>8.	Cover this entire mound of salad with an even layer of the reserved, freshly made mayonnaise, then garnish it by grating the remaining boiled eggs evenly over the dressing.</li>
+</ul>
+</div>
+</div>
+</div>  
+</div>
+        <div class="right">
+            <h3>Shopping List</h3>
+            <p>This is the image of the relevant recipe</p>
+            
+            <button class="button button2" id="shopButton"> Display Shopping List </button> <br/>
+            <script>
+                // Show/Hide Shopping List when button is clicked
+                document.getElementById("shopButton").addEventListener("click", function() {
+                    var shoppingListContainer = document.getElementById("shoppingListContainer");
+                    
+                    // Toggle display
+                    if (shoppingListContainer.style.display === "none") {
+                        shoppingListContainer.style.display = "block";
+                        
+                        // Fetch shopping list items via AJAX (you can replace this with a real API)
+                        fetch('ShoppingList.php')
+                        .then(response => response.text())
+                        .then(data => {
+                            // Insert data into shopping list
+                            document.getElementById("shoppingList").innerHTML = data;
+                        });
+                    } else {
+                        shoppingListContainer.style.display = "none";
+                    }
+                });
+            </script>
+            <div id="shoppingListContainer" style="display:none;">
+                <h4>Your Shopping List:</h4>
+                <ul id="shoppingList">
+                    
+                    <!-- Shopping list content will be populated here -->
+                </ul>
+            </div>
+
+            <div>
+                <img class="img1" src="Images/Cook islands potato salad.jpg" alt="Cook islands potato salad" />
+            </div>
+        </div>
+    </div>
+     </div> 
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+        <p> Contact Us Through </br>
+        Email:
+        </p>
+        <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+        <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+        <img src="Images/Facebook.png" alt="Facebook Icon">
+        </a></p>
+        <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+            <img src="Images/instagram.png" alt="Instagram Icon">
+            </a></p>
+        </div>
+        </footer>
+    <script src="search.js"></script>
+<script src="AdminLogin.js"></script>
+<script src="Home.js"></script>
+   
+</body>
+</html>

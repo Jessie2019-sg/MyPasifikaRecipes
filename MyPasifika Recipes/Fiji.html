@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Island Member Countries</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Recipes.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+  
+
+    
+    <div class="featured-recipe">
+        <div class="Reccontainer">
+        <!-- Left Column: Regions and Share Recipes Button -->
+        <div class="left-column">
+        <h2>Taste Of The Pacific</h2>
+        <ul>
+            <li><a href="Cook Island.html">Cook Islands</a></li>
+            <li><a href="Fiji.html">Fiji</a></li>
+            <li><a href="Kiribati.html">Kiribati</a></li>
+            <li><a href="Marshall Islands.html">Marshall Islands</a></li>
+            <li><a href="Nauru.html">Nauru</a></li>
+            <li><a href="Niue.html">Niue</a></li>
+            <li><a href="Samoa.html">Samoa</a></li>
+            <li><a href="Solomon Islands.html">Solomon Islands</a></li>
+            <li><a href="Tonga.html">Tonga</a></li>
+            <li><a href="Tuvalu.html">Tuvalu</a></li>
+            <li><a href="Vanuatu.html">Vanuatu</a></li>
+            <li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+        </ul>
+    </br>
+        <a href="SubmitRecipe.php" class="cta-btn">Share Recipes</a>
+        </div>
+
+<!-- Right Column: Recipe Categories -->
+
+<div class="right-column">
+
+<!-- Breakfast Category -->
+<div class="category-row">
+<h2>Breakfast</h2>
+<div class="thumbnail-container" id="category-container">
+<div class="thumbnail">
+<a href="Vakalavalava.html">
+<img src="Images/Vakalavalava.jpeg" alt="Breakfast"></a>
+<div class="thumbnail-description">
+<h3>Vakalavalava</h3>
+<p>Fijian dessert made with grated fresh cassava, shredded coconut, sugar, and butter.
+<a href = "Vakalavalava.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="VegeBake.html">
+<img src="Images/VegeBake.jpeg" alt="Cook Islands Potato Salad"> </a>
+<div class="thumbnail-description">
+<h3>Vege Bake</h3>
+<p>A creamy vegetable bake packed with 
+    colourful veggies, smothered in a creamy sauce and topped with crispy, cheesy breadcrumbs.
+<a href = "Vege Bake.html">See more..</a></p>
+</div>
+                       
+</div>
+<div class="thumbnail">
+    <a href="Mille Feuille.html">
+    <img src="Images/Mille Feuille.jpeg" alt="Aitutaki Snowball"></a>
+    <div class="thumbnail-description">
+    <h3>Mille Feuille</h3>
+    <p>Mix corn flour passionfruit pulp, 
+        kumquat juice, honey and bu juice in a medium sized saucepan.
+    <a href = "Mille Feuille.html">See more..</a></p>
+    </div>
+    </div>
+
+<div class="thumbnail">
+<a href="Baba Bele Wraps.html">
+<img src="Images/Baba Bele Wraps.jpeg" alt="Cook Island Doughnuts"></a>
+<div class="thumbnail-description">
+<h3>Baba Bele Wraps</h3>
+<p>INGREDIENTS. 4 Baigans (Eggplant) 2 Capsicums (red and green) 1 tbsp. Toasted Cumin 4 tbsp. Virgin Coconut Oil Salt and Pepper
+<a href = "Baba Bele Wraps.html">See more..</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lunch Category -->
+<div class="category-row">
+<h2>Lunch</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Sisa Salad.html">
+<img src="Images/Sisa Salad.jpeg" alt="Sisa Salad"></a>
+<div class="thumbnail-description">
+<h3>Sisa Salad</h3>
+<p>INGREDIENTS. 4 Baigans (Eggplant) 2 Capsicums 
+    (red and green) 1 tbsp. Toasted Cumin 4 tbsp. Virgin Coconut Oil Salt and Pepper
+<a href = "Sisa Salad.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Su kota.html">
+<img src="Images/Su kota.jpeg" alt="Su kota"></a>
+<div class="thumbnail-description">
+<h3>Revamped Su kota</h3>
+<p>For the Su Kota Broth: Place 2 cups 
+    of water and the juice from the green and brown coconuts in a pot and boil with the spring onions for five minutes
+<a href = "Su Kota.html">See more..</a></p>
+</div>
+</div>
+
+
+<div class="thumbnail">
+<a href="Ota and Clam Salad.html">
+<img src="Images/download.jpg" alt="Ota and Clam Salad"></a>
+<div class="thumbnail-description">
+<h3>Ota and Clam Salad</h3>
+<p>Ingredients: 50g Clams (Any small shellfish), 50 g Lemon grass, 100g Ota (River Fern: You could substitute Watercress, but skip the blanching step)
+<a href = "Ota and Clam Salad.html">See more..</a></p>
+</div>
+</div>
+      
+
+<div class="thumbnail">
+<a href="Rourou soup.html">
+<img src="Images/Rourou soup.jpeg" alt="Rourou soup"></a>
+<div class="thumbnail-description">
+<h3>Rourou Soup</h3>
+<p>This authentic Fijian dish is made 
+    with taro leaves which are cooked or stewed in coconut milk. 
+<a href = "Rourou soup.html">See more..</a></p>
+</div>
+</div>   
+</div>
+</div>
+
+            <!-- Dinner Category -->
+<div class="category-row">
+<h2>Dinner</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Ota miti.html">
+<img src="Images/Ota miti.jpeg"Ota Miti"></a>
+<div class="thumbnail-description">
+<h3>Ota Miti</h3>
+<p>WILD FERN SALAD - OTA MITI. Ota is a Fijian fern frond super food packed with potassium.
+<a href = "Ota miti.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Pumpkin Soup.html">
+<img src="Images/PumpkinSoup.jpg" alt="Pumpkin Soup"></a>
+<div class="thumbnail-description">
+<h3>Pumpkin Soup</h3>
+<p>A classic, super easy pumpkin soup that's fast to make. Thick, creamy and dreamy, with sweet pumpkin flavour and great savoury undertones!
+<a href = "Pumpkin Soup.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+    <a href="Steamed Fish.html">
+    <img src="Images/Steamed Fish.jpeg" alt="Steamed Fish"></a>
+    <div class="thumbnail-description">
+    <h3>Steamed Fish</h3>
+    <p>Steamed white fish with sugar and soy sauce is a 5 ingredient quick and great tasting weeknight meal.
+    <a href = "Steamed Fish.html">See more..</a></p>
+    </div>
+    </div>
+          
+    <div class="thumbnail">
+        <a href="Crumbed Okra.html">
+        <img src="Images/Crumbed Okra.jpeg" alt="Spinach In Coconut Milk"></a>
+        <div class="thumbnail-description">
+        <h3>Crumbed Okra</h3>
+        <p>okra is a truly classic recipe. Perfectly crisp bites of okra coated in a simple, flavorful breading.
+        <a href = "Crumbed Okra.html">See more..</a></p>
+        </div>
+        </div>
+          
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+    <p> Contact Us Through </br>
+    Email: 
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+    <img src="Images/instagram.png" alt="Instagram Icon">
+    </a></p>
+    </div>
+    </footer>
+    
+    <script src="search.js"></script>
+    <script src="AdminLogin.js"></script>
+    <script src="Home.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Island Member Countries</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Recipes.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+   
+
+    
+    <div class="featured-recipe">
+        <div class="Reccontainer">
+        <!-- Left Column: Regions and Share Recipes Button -->
+        <div class="left-column">
+        <h2>Taste Of The Pacific</h2>
+        <ul>
+            <li><a href="Cook Island.html">Cook Islands</a></li>
+            <li><a href="Fiji.html">Fiji</a></li>
+            <li><a href="Kiribati.html">Kiribati</a></li>
+            <li><a href="Marshall Islands.html">Marshall Islands</a></li>
+            <li><a href="Nauru.html">Nauru</a></li>
+            <li><a href="Niue.html">Niue</a></li>
+            <li><a href="Samoa.html">Samoa</a></li>
+            <li><a href="Solomon Islands.html">Solomon Islands</a></li>
+            <li><a href="Tonga.html">Tonga</a></li>
+            <li><a href="Tuvalu.html">Tuvalu</a></li>
+            <li><a href="Vanuatu.html">Vanuatu</a></li>
+            <li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+        </ul>
+    </br>
+        <a href="SubmitRecipe.php" class="cta-btn">Share Recipes</a>
+        </div>
+
+<!-- Right Column: Recipe Categories -->
+
+<div class="right-column">
+
+<!-- Breakfast Category -->
+<div class="category-row">
+<h2>Breakfast</h2>
+<div class="thumbnail-container" id="category-container">
+<div class="thumbnail">
+<a href="Pandanus Fruit.html">
+<img src="Images/Pandanus Fruit.png" alt="Pandanus Fruit"></a>
+<div class="thumbnail-description">
+<h3>Pandanus Fruit</h3>
+<p> Also known as “Screw Pine,” pandanus fruit is a common sight in the Pacific Islands, and so it is in Nauru.
+<a href = "Pandanus Fruit.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Banana Fritters.html">
+<img src="Images/Banana Fritters.jpeg" alt="Banana Fritters"> </a>
+<div class="thumbnail-description">
+<h3>Banana Fritters</h3>
+<p>Bananas are abundant in Nauru, and one of the popular ways they are used in local cuisine is by making banana fritters. 
+<a href = "Banana Fritters.html">See more..</a></p>
+</div>
+                       
+</div>
+<div class="thumbnail">
+    <a href="Gedageda.html">
+    <img src="Images/Gedageda.jpeg" alt="Gedageda"></a>
+    <div class="thumbnail-description">
+    <h3>Gedageda</h3>
+    <p>Gedageda is a traditional Nauruan recipe – a type of seafood soup or stew. 
+    <a href = "Gedageda.html">See more..</a></p>
+    </div>
+    </div>
+
+<div class="thumbnail">
+<a href="Bacon Avocado and Fried Egg Ham Sandwich.html">
+<img src="Images/Bacon Avocado and Fried Egg Ham Sandwich.jpeg" alt="Bacon Avocado and Fried Egg Ham Sandwich"></a>
+<div class="thumbnail-description">
+<h3>Bacon Avocado and Fried Egg Ham Sandwich</h3>
+<p>Start your day with this simple but delicious breakfast of avocado, pulled pork, bacon and fried egg.
+<a href = "Bacon Avocado and Fried Egg Ham Sandwich.html">See more..</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lunch Category -->
+<div class="category-row">
+<h2>Lunch</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Coconut Crusted Fish.html">
+<img src="Images/Coconut Crusted Fish.jpg" alt="Coconut Crusted Fish"></a>
+<div class="thumbnail-description">
+<h3>Coconut Crusted Fish</h3>
+<p>Coconut crusted fish is a widely popular dish, typically consisting of white fish fillets marinated in lime juice, salt, and pepper
+<a href = "Coconut Crusted Fish.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="coconut crusted cauliflower.html">
+<img src="Images/coconut crusted cauliflower.webp" alt="coconut crusted cauliflower"></a>
+<div class="thumbnail-description">
+<h3>coconut crusted cauliflower</h3>
+<p> We stop by Nauru and turn their national dish into a vegan Nauru recipe: coconut crusted cauliflower.
+<a href = "coconut crusted cauliflower.html">See more..</a></p>
+</div>
+</div>
+
+
+<div class="thumbnail">
+<a href="Nauru Fried Egg & Corned Beef Rice Bowl.html">
+<img src="Images/Nauru 🇳🇷 Fried Egg & Corned Beef Rice Bowl.jpeg" alt="Nauru Fried Egg & Corned Beef Rice Bowl"></a>
+<div class="thumbnail-description">
+<h3>Nauru Fried Egg & Corned Beef Rice Bowl</h3>
+<p>This simple meal comes together in a flash. And if you’ve never tried or haven’t had canned corned beef in a long time, give it a go! 
+<a href = "Nauru Fried Egg & Corned Beef Rice Bowl.html">See more..</a></p>
+</div>
+</div>
+      
+
+<div class="thumbnail">
+<a href="Beef Curry.html">
+<img src="Images/Beef curry.jpg" alt="Beef Curry"></a>
+<div class="thumbnail-description">
+<h3>Beef Curry</h3>
+<p>When the dish is ready, gather family and friends around the floor with the serving dishes in the middle
+<a href = "Beef Curry.html">See more..</a></p>
+</div>
+</div>
+    
+    
+</div>
+</div>
+
+            <!-- Dinner Category -->
+<div class="category-row">
+<h2>Dinner</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Lemon Chicken.html">
+<img src="Images/Lemon Chicken.jpg" alt="Lemon Chicken"></a>
+<div class="thumbnail-description">
+<h3>Lemon Chicken</h3>
+<p>It may not be the exact taste I found in Nauru, but it’s going to delight your taste buds as well as your family and friends.
+<a href = "Lemon Chicken.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Fish Soup.html">
+<img src="Images/Fish Soup.jpeg" alt="Fish Soup"></a>
+<div class="thumbnail-description">
+<h3>Fish Soup</h3>
+<p>Fish soups and stews are very popular in Nauru; they can contain all kinds of local seafood.
+<a href = "Fish Soup.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+    <a href="Chop Suey (Meat & Vegetable Stir-Fry).html">
+    <img src="Images/Choy-Suey.jpeg" alt="Chop Suey (Meat & Vegetable Stir-Fry)"></a>
+    <div class="thumbnail-description">
+    <h3>Chop Suey (Meat & Vegetable Stir-Fry)</h3>
+    <p>Varying ingredients, but it’s typically a stir-fry made with some kind of meat and vegetables.
+    <a href = "Chop Suey (Meat & Vegetable Stir-Fry).html">See more..</a></p>
+    </div>
+    </div>
+          
+    <div class="thumbnail">
+        <a href="Nauru Island Glaze Delight.html">
+        <img src="Images/Nauru Island Glaze Delight.jpeg" alt="Nauru Island Glaze Delight"></a>
+        <div class="thumbnail-description">
+        <h3>Nauru Island Glaze Delight</h3>
+        <p>A tropical fusion dish featuring succulent chicken breasts marinated in a vibrant blend.
+        <a href = "Nauru Island Glaze Delight.html">See more..</a></p>
+        </div>
+        </div>
+          
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+    <p> Contact Us Through </br>
+    Email:
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+        <img src="Images/instagram.png" alt="Instagram Icon">
+        </a></p>
+    </div>
+    </footer>
+    
+    <script src="search.js"></script>
+    <script src="AdminLogin.js"></script>
+    <script src="Home.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="searchcontent.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <ul class="nav">
+                <img class="imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Logo">
+                <h1 class="logo">My Pacifika Recipe</h1>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
+                <li><a href="Review.html">Table Talk</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="FAQ.html">FAQ?</a></li>
+                <li>
+                    <a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+                        <img src="Images/Search.png" alt="Search Icon">
+                    </a>
+                </li>
+                <script>
+                    // Function to open the search page with the query
+                    function openSearchPage() {
+                    const query = prompt("Enter a recipe to search for:");
+                    if (query) {
+                    // Redirect to search.html with the query as a URL parameter
+                    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+                    }
+                    }
+                    </script>
+                <li>
+                    <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+                </li> <!-- Admin button -->
+            </ul>
+        </nav>
+        
+    </div>
+
+</header>
+
+<!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Admin Login</h2>
+        <form method="POST" action="AdminLogin.php">
+            <label for="email">Email</label>
+            <input type="email" name="email" required placeholder="Email">
+            <label for="password">Password</label>
+            <input type="password" name="password" required placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<h1 class="search-title">Search Results</h1>
+<div class="thumbnail-container" id="search-results"></div>
+
+<script>
+    // Retrieve the search query from the URL
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query')?.toLowerCase();
+
+    // Array of recipe thumbnails with keywords for filtering and URLs for each recipe
+    const recipes = [
+        {
+            img: "Images/Poke.jpeg",
+            title: "Poke",
+            description: "A traditional Cook Islands dessert.",
+            keywords: "poke dessert bananas coconut breakfast",
+            url: "Poke.html" // URL to the recipe page
+        },
+        {
+            img: "Images/Aitutaki Snowball.jpeg",
+            title: "AituTaki",
+            description: "A traditional Cook Islands dessert.",
+            keywords: "dessert breakfast Cook Islands",
+            url: "Aitutaki.html" // URL to the recipe page
+        },
+        {
+            img: "Images/Cook Island Doughnuts.jpg",
+            title: "Cook Island Doughnuts",
+            description: "A traditional Cook Islands Breakfast.",
+            keywords: "dessert breakfast Cook Islands",
+            url: "CookIslandDoughnuts.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Sisa Salad.jpeg",
+            title: "Sisa Salad",
+            description: "A traditional Fijian Lunch.",
+            keywords: "lunch Fiji  Fiji Islands, veg, vege",
+            url: "Sisa Salad.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Rourou soup.jpeg",
+            title: "Rourou Soup",
+            description: "A traditional Fijian Lunch.",
+            keywords: "Dinner dinner Lunch lunch, Fiji Islands veg vege",
+            url: "Rourou soup.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Grilled Fish.jpeg",
+            title: "Grilled Fish",
+            description: "A traditional Marshallese Lunch.",
+            keywords: "Dinner dinner lunch Marshall Islands veg vege",
+            url: "Grilled Fish.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Chicken Katsu with Macaroni Salad and Rice.jpeg",
+            title: "Chicken Katsu with Macaroni Salad and Rice",
+            description: "A traditional Marshallese Lunch.",
+            keywords: "Dinner dinner Lunch lunch marshallese veg vege seafood",
+            url: "Chicken Katsu with Macaroni Salad and Rice.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Papaya Salad.jpeg",
+            title: "Papaya Salad",
+            description: "This super fresh green papaya salad is packed with raw crunchy veggies, roasted peanuts, fried shallots, and a citrusy lime dressing!",
+            keywords: "Papaya Salad Tonga lunch vege",
+            url: "Papaya Salad.html" // URL to the recipe page
+        },
+
+        {
+            img: "Images/Palusami.jpeg",
+            title: "Palusami",
+            description: "A traditional I-Kiribati dish; taro leaves layered with coconut cream and fresh seafood. ",
+            keywords: "Palusami Kiribati Dinner dinner Lunch lunch vege",
+            url: "Palusami.html" // URL to the recipe page
+        },
+    ];
+
+
+
+    // Filter recipes based on the search query
+    const filteredRecipes = recipes.filter(recipe => recipe.keywords.includes(query));
+
+    // Display filtered results
+    const resultsContainer = document.getElementById('search-results');
+    if (filteredRecipes.length > 0) {
+        filteredRecipes.forEach(recipe => {
+            const thumbnailHTML = `
+            <div class="thumbnail">
+                    <img src="${recipe.img}" alt="${recipe.title}">
+                    <div class="thumbnail-description">
+                        <h3><a href="${recipe.url}">${recipe.title}</a></h3>
+                        <p>${recipe.description}</p>
+                    </div>
+                </div>
+            `;
+            resultsContainer.innerHTML += thumbnailHTML;
+        });
+    } else {
+        resultsContainer.innerHTML = `<p>No results found for "${query}".</p>`;
+    }
+</script>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container" style = "position: relative;">
+    <p> Contact Us Through </br>
+    Email: 
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+    <img src="Images/instagram.png" alt="Instagram Icon">
+    </a></p>
+    </div>
+    </footer>
+
+<script src="search.js"></script>
+<script src="AdminLogin.js"></script>
+<script src="Home.js"></script>
+</body>
+</html>

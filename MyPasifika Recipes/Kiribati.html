@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Island Member Countries</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Recipes.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+    
+    
+    <div class="featured-recipe">
+        <div class="Reccontainer">
+        <!-- Left Column: Regions and Share Recipes Button -->
+        <div class="left-column">
+        <h2>Taste Of The Pacific</h2>
+        <ul>
+            <li><a href="Cook Island.html">Cook Islands</a></li>
+            <li><a href="Fiji.html">Fiji</a></li>
+            <li><a href="Kiribati.html">Kiribati</a></li>
+            <li><a href="Marshall Islands.html">Marshall Islands</a></li>
+            <li><a href="Nauru.html">Nauru</a></li>
+            <li><a href="Niue.html">Niue</a></li>
+            <li><a href="Samoa.html">Samoa</a></li>
+            <li><a href="Solomon Islands.html">Solomon Islands</a></li>
+            <li><a href="Tonga.html">Tonga</a></li>
+            <li><a href="Tuvalu.html">Tuvalu</a></li>
+            <li><a href="Vanuatu.html">Vanuatu</a></li>
+            <li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+        </ul>
+    </br>
+        <a href="SubmitRecipe.php" class="cta-btn">Share Recipes</a>
+        </div>
+
+<!-- Right Column: Recipe Categories -->
+
+<div class="right-column">
+
+<!-- Breakfast Category -->
+<div class="category-row">
+<h2>Breakfast</h2>
+<div class="thumbnail-container" id="category-container">
+<div class="thumbnail">
+<a href="Buatoro.html">
+<img src="Images/Buatoro.jpeg" alt="Buatoro"></a>
+<div class="thumbnail-description">
+<h3>Buatoro</h3>
+<p> Buatoro is a moist, rich cake made 
+    from grated pumpkin or taro. This delicious dessert from Kiribati is easy to put together and full of unique flavor
+<a href = "Buatoro.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Te mai.html">
+<img src="Images/te mai.jpeg" alt="Te mai"> </a>
+<div class="thumbnail-description">
+<h3>Te mai</h3>
+<p>The tree is actually is native to Polynesia, and appreciated everywhere it grows for providing abundant, filling fruit.
+<a href = "Te mai.html">See more..</a></p>
+</div>
+                       
+</div>
+<div class="thumbnail">
+    <a href="Milk Rice.html">
+    <img src="Images/Milk rice.jpeg" alt="Milk Rice"></a>
+    <div class="thumbnail-description">
+    <h3>Milk Rice </h3>
+    <p>Milk Rice is an aromatic, coconut rich breakfast meal
+    <a href = "Milk Rice.html">See more..</a></p>
+    </div>
+    </div>
+
+<div class="thumbnail">
+<a href="Pandanus Fruit.html">
+<img src="Images/Pandanus Fruit.jpeg" alt="Pandanus Fruit"></a>
+<div class="thumbnail-description">
+<h3>Pandanus Fruit</h3>
+<p>One of the exotic staples in Kiribati is the pandanus fruit, also known as screwpine. The fruit has segments that can be boiled, pounded, and then filtered to make pandanus juice.
+<a href = "Pandanus Fruit.html">See more..</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lunch Category -->
+<div class="category-row">
+<h2>Lunch</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Te ika.html">
+<img src="Images/Te ika.jpeg" alt="Te ika"></a>
+<div class="thumbnail-description">
+<h3>Te ika</h3>
+<p>Chunks of lean ahi, tuna seasoned with soy sauce, sesame oil, and sweet Maui onions, often with a sprinkling of sesame seeds or scallions.
+<a href = "Te ika.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Te inai.html">
+<img src="Images/Te inai.jpeg" alt="Te inai"></a>
+<div class="thumbnail-description">
+<h3>Te inai</h3>
+<p>A quick search on my phone revealed a parrotfish on a Kiribati stamp. Tasty and Convenient! 
+<a href = "Te inai.html">See more..</a></p>
+</div>
+</div>
+
+
+<div class="thumbnail">
+<a href="Te bwaukin.html">
+<img src="Images/Te bwaukin.jpeg" alt="Te bwaukin"></a>
+<div class="thumbnail-description">
+<h3>Te bwaukin</h3>
+<p>Coconut milk and pumpkin are both foods that can go either sweet or savory, and in this case tossing on some sugar brings out nice flavor in both.
+<a href = "Te bwaukin.html">See more..</a></p>
+</div>
+</div>
+      
+
+<div class="thumbnail">
+<a href="Batata Mash.html">
+<img src="Images/Batata Mash.jpeg" alt="Batata Mash"></a>
+<div class="thumbnail-description">
+<h3>Batata Mash</h3>
+<p>Batata mash is a type of potato mash made with a variety of sweet potato known as batata. 
+<a href = "Batata Mash.html">See more..</a></p>
+</div>
+</div>
+    
+    
+</div>
+</div>
+
+            <!-- Dinner Category -->
+<div class="category-row">
+<h2>Dinner</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Roasted Lobster Tails.html">
+<img src="Images/Roasted Lobster.jpeg" alt="Roasted Lobster Tails"></a>
+<div class="thumbnail-description">
+<h3>Roasted Lobster Tails</h3>
+<p>Lobster tails  with coconut curry dipping sauce on the side.
+<a href = "Roasted Lobster Tails.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Kinaki.html">
+<img src="Images/Kinaki.jpeg" alt="Rukau"></a>
+<div class="thumbnail-description">
+<h3>Kinaki (Island Root Vegetables)</h3>
+<p>Taro, kumara (sweet potato) and maniota (arrowroot)!.
+<a href = "Kinaki.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+    <a href="Te bua toro ni baukin.html">
+    <img src="Images/Te bua toro ni baukin.jpeg" alt="Te bua toro ni baukin"></a>
+    <div class="thumbnail-description">
+    <h3>Te bua toro ni baukin</h3>
+    <p>Canned meat, cabbage, and pumpkin as the main ingredients
+    <a href = "Te bua toro ni baukin.html">See more..</a></p>
+    </div>
+    </div>
+          
+    <div class="thumbnail">
+        <a href="Palusami.html">
+        <img src="Images/Palusami.jpeg" alt="Palusami"></a>
+        <div class="thumbnail-description">
+        <h3>Palusami</h3>
+        <p>A traditional I-Kiribati dish; taro leaves layered with coconut cream and fresh seafood. 
+        <a href = "Palusami.html">See more..</a></p>
+        </div>
+        </div>
+          
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+    <p> Contact Us Through </br>
+    Email:
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+        <img src="Images/instagram.png" alt="Instagram Icon">
+        </a></p>
+    </div>
+    </footer>
+    
+    <script src="search.js"></script>
+    <script src="AdminLogin.js"></script>
+    <script src="Home.js"></script>
+</body>
+</html>

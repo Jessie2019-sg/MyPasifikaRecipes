@@ -1,0 +1,17 @@
+/* Adjust .right-column to use flexbox for horizontal image alignment */
+.Lright-column {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal alignment */
+    flex-wrap: wrap; /* Ensure images wrap to the next line if necessary */
+    gap: 20px; /* Adds space between the images */
+    padding-left: 20px;
+  }
+  
+  /* Ensure the image container takes up consistent space */
+  .Limage-container {
+    flex: 1;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  

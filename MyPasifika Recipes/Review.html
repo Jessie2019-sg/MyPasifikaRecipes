@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Review.css">
+    <title>Submit Review</title>
+</head>
+
+<body>
+  <!-- Header Section -->
+
+  <header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+   
+   
+<div class="Revcontainer">
+<!-- Left Column: Customer Review -->
+<div class="feedback-form">
+<h2>Submit Your Review</h2>
+<form id="reviewForm" method="POST" enctype="multipart/form-data">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="message">Feedback:</label>
+<textarea id="message" name="message" required></textarea>
+</br>
+
+<button type="submitPopupRating" class="submit-button">Submit</button>
+
+</form>
+</br>
+<div id="successMessage" style="display: flexbox; color:  #e65c00; text-align:center;">
+Review submitted successfully!
+</div>
+<div id="errorMessage" style="display: none; color: red;">
+There was an error submitting your review. Please try again.
+</div>
+</div>
+<div class="reviews-container">
+<h2>Customer Reviews</h2>
+<!-- This will hold the reviews -->
+<div class="review-list">
+<!-- Reviews will be dynamically inserted here -->
+</div>
+</div>
+
+<div class="reviews-container">
+<div id="averageRatingDisplay">
+<h2>Website Average Rating: <span id="averageRating">0</span>/5</h2>
+</div>
+<button type="button" class="Rate-button" id="openRatingModal">Rate</button>
+<input type="hidden" id="rating" name="rating" value="0"> <!-- Hidden input to capture pop-up rating -->
+<h2>Star Ratings</h2>
+<div class="rating-list">
+<!-- Star ratings will be dynamically inserted here -->
+</div>
+</div>
+            
+<!-- Modal for rating pop-up -->
+<div id="ratingModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<h2>Rate the Recipe</h2>
+
+<!-- Name field in the pop-up modal -->
+<label for="popup-name">Name:</label>
+<input type="text" id="popup-name" name="popup-name" required>
+</br>
+</br>
+<div class="star-rating">
+<input type="radio" id="star5" name="popup-rating" value="5">
+<label for="star5">&#9733;</label>
+<input type="radio" id="star4" name="popup-rating" value="4">
+<label for="star4">&#9733;</label>
+<input type="radio" id="star3" name="popup-rating" value="3">
+<label for="star3">&#9733;</label>
+<input type="radio" id="star2" name="popup-rating" value="2">
+<label for="star2">&#9733;</label>
+<input type="radio" id="star1" name="popup-rating" value="1">
+<label for="star1">&#9733;</label>
+</div>
+<button id="submitPopupRating" class="submit-button">Submit</button>
+        
+</div>
+</div>
+
+    
+</div>
+</div>
+<footer>
+<div class="container">
+<p> Contact Us Through </br>
+Email: </br>
+Phone: 
+</p>
+<p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+<p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+<img src="Images/Facebook.png" alt="Facebook Icon">
+</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Instagram">
+<img src="Images/instagram.png" alt="Instagram Icon">
+</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Twitter">
+<img src="Images/Twitter.png" alt="Twitter Icon">
+</a></p>
+</div>
+</footer>
+<script src="search.js"></script>
+<script src="AdminLogin.js"></script>
+<script src="Home.js"></script>
+<script src="Review.js"></script>
+<script src="rating.js"></script>
+</body>
+</html>

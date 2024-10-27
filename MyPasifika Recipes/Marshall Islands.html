@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Island Member Countries</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Recipes.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+        <button class="image-button" id="adminBtn" style="z-index: 999; position: relative;"></button>
+
+    </li> <!-- Admin button -->
+    
+    </ul>
+    </nav>  
+    </div>
+    </header>
+    <!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Admin Login</h2>
+    <form method="POST" action="AdminLogin.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" required placeholder="Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Login</button>
+    </form>
+    </div>
+    </div>
+
+   
+
+
+    
+<div class="featured-recipe">
+        <div class="Reccontainer">
+        <!-- Left Column: Regions and Share Recipes Button -->
+        <div class="left-column">
+        <h2>Taste Of The Pacific</h2>
+        <ul>
+            <li><a href="Cook Island.html">Cook Islands</a></li>
+            <li><a href="Fiji.html">Fiji</a></li>
+            <li><a href="Kiribati.html">Kiribati</a></li>
+            <li><a href="Marshall Islands.html">Marshall Islands</a></li>
+            <li><a href="Nauru.html">Nauru</a></li>
+            <li><a href="Niue.html">Niue</a></li>
+            <li><a href="Samoa.html">Samoa</a></li>
+            <li><a href="Solomon Islands.html">Solomon Islands</a></li>
+            <li><a href="Tonga.html">Tonga</a></li>
+            <li><a href="Tuvalu.html">Tuvalu</a></li>
+            <li><a href="Vanuatu.html">Vanuatu</a></li>
+            <li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+        </ul>
+    </br>
+        <a href="SubmitRecipe.php" class="cta-btn">Share Recipes</a>
+        </div>
+
+<!-- Right Column: Recipe Categories -->
+
+<div class="right-column">
+
+<!-- Breakfast Category -->
+<div class="category-row">
+<h2>Breakfast</h2>
+<div class="thumbnail-container" id="category-container">
+<div class="thumbnail">
+<a href="Island Breakfast (Spam, Eggs, and Rice).html">
+<img src="Images/Island Breakfast (Spam, Eggs, and Rice).jpeg" alt="Island Breakfast (Spam, Eggs, and Rice)"></a>
+<div class="thumbnail-description">
+<h3>Island Breakfast (Spam, Eggs, and Rice)</h3>
+<p> This is a dish that showed up often on breakfast menus at Marshallese restaurants, sometimes referred to as an ‘island breakfast'
+<a href = "Island Breakfast (Spam, Eggs, and Rice).html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Baked Papaya with Coconut Cream.html">
+<img src="Images/baked papaya.jpeg" alt="Baked Papaya with Coconut Cream"> </a>
+<div class="thumbnail-description">
+<h3>Baked Papaya with Coconut Cream</h3>
+<p>Marshallese baked papaya with coconut cream was a sweet delight.
+<a href = "Baked Papaya with Coconut Cream.html">See more..</a></p>
+</div>
+                       
+</div>
+<div class="thumbnail">
+    <a href="Marshallese Grilled Pineapple.html">
+    <img src="Images/Marshallese grilled pineapple.jpeg" alt="Marshallese Grilled Pineapple"></a>
+    <div class="thumbnail-description">
+    <h3>Marshallese Grilled Pineapple</h3>
+    <p>Marshallese Grilled pineapple was the perfect accompaniment to the grilled fish and chukuchuk.
+    <a href = "Marshallese Grilled Pineapple.html">See more..</a></p>
+    </div>
+    </div>
+
+<div class="thumbnail">
+<a href="Sweet Macadamia Pie.html">
+<img src="Images/Sweet Macadamia Pie.jpg" alt="Sweet Macadamia Pie"></a>
+<div class="thumbnail-description">
+<h3>Sweet Macadamia Pie</h3>
+<p>While Macadamia nuts aren’t Marshallese per se, the rich nut goes perfectly with local coconut. 
+<a href = "Sweet Macadamia Pie.html">See more..</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lunch Category -->
+<div class="category-row">
+<h2>Lunch</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Fish with Pumpkin and Rice Porridge.html">
+<img src="Images/Fish with Pumpkin and Rice Porridge.jpeg" alt="Fish with Pumpkin and Rice Porridge"></a>
+<div class="thumbnail-description">
+<h3>Fish with Pumpkin and Rice Porridge</h3>
+<p>Pumpkin and rice porridge, also called ‘rice banke,’ was one of the few dishes that I found when initially looking for food from the Marshall Islands.
+<a href = "Fish with Pumpkin and Rice Porridge.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="Chicken Katsu with Macaroni Salad and Rice.html">
+<img src="Images/Chicken Katsu with Macaroni Salad and Rice.jpeg" alt="Chicken Katsu with Macaroni Salad and Rice"></a>
+<div class="thumbnail-description">
+<h3>Chicken Katsu with Macaroni Salad and Rice</h3>
+<p> Chicken katsu, seem to be popular at restaurants in the Marshall Islands. It’s often served with macaroni salad and/or rice,
+<a href = "Chicken Katsu with Macaroni Salad and Rice.html">See more..</a></p>
+</div>
+</div>
+
+
+<div class="thumbnail">
+<a href="Sweet Potatoes & Fried Bananas.html">
+<img src="Images/Sweet Potatoes & Fried Bananas.jpeg" alt="Sweet Potatoes & Fried Bananas"></a>
+<div class="thumbnail-description">
+<h3>Sweet Potatoes & Fried Bananas</h3>
+<p>Today we’re going to the Marshall Islands via stove top travel. And there, the Marshallese add their bit of love to these ingredients.
+<a href = "Sweet Potatoes & Fried Bananas.html">See more..</a></p>
+</div>
+</div>
+      
+
+<div class="thumbnail">
+<a href="Grilled Fish.html">
+<img src="Images/Grilled Fish.jpeg" alt="Grilled Fish"></a>
+<div class="thumbnail-description">
+<h3>Grilled Fish</h3>
+<p>Marshallese grilled fish is loved all over the Islands. Of course all types of fish are in abundance there in the middle of the Pacific Ocean.
+<a href = "Grilled Fish=.html">See more..</a></p>
+</div>
+</div>
+    
+    
+</div>
+</div>
+
+            <!-- Dinner Category -->
+<div class="category-row">
+<h2>Dinner</h2>
+<div class="thumbnail-container" id="lunch-container">
+<div class="thumbnail">
+<a href="Marshallese Burger.html">
+<img src="Images/Marshall Burger.jpeg" alt="Marshallese Burger"></a>
+<div class="thumbnail-description">
+<h3>Marshallese Burger</h3>
+<p>For proteins, Marshallese eat a lot of fish, chicken and pork. ... That way your burger will taste like chicken, not mystery meat.
+<a href = "Marshallese Burger.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+<a href="bwiro.html">
+<img src="Images/bwiro.jpeg" alt="bwiro"></a>
+<div class="thumbnail-description">
+<h3>bwiro</h3>
+<p>Bwiro is a lightly sweet dish made from fermented breadfruit and coconut milk. 
+<a href = "bwiro.html">See more..</a></p>
+</div>
+</div>
+
+<div class="thumbnail">
+    <a href="Chicken and Cherry Tomatoes.html">
+    <img src="Images/Chicken and cherry tomatoes.jpeg" alt="Chicken and Cherry Tomatoes"></a>
+    <div class="thumbnail-description">
+    <h3>Chicken and Cherry Tomatoes</h3>
+    <p>While grocery shopping in Majuro sometimes has its challenges, the ingredients in these recipes are pretty much always available
+    <a href = "Chicken and Cherry Tomatoes.html">See more..</a></p>
+    </div>
+    </div>
+          
+    <div class="thumbnail">
+        <a href="Asparagus & Mozzarella Stuffed Chicken Breasts.html">
+        <img src="Images/Asparagus & Mozzarella Stuffed Chicken Breasts.jpeg" alt="Asparagus & Mozzarella Stuffed Chicken Breasts"></a>
+        <div class="thumbnail-description">
+        <h3>Asparagus & Mozzarella Stuffed Chicken Breasts</h3>
+        <p>This easy and delicious Asparagus Stuffed Chicken Breast recipe is a perfect meal for a weeknight dinner.
+        <a href = "Asparagus & Mozzarella Stuffed Chicken Breasts.html">See more..</a></p>
+        </div>
+        </div>
+          
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+    <p> Contact Us Through </br>
+    Email:
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+        <img src="Images/instagram.png" alt="Instagram Icon">
+        </a></p>
+    </div>
+    </footer>
+    
+    <script src="search.js"></script>
+    <script src="AdminLogin.js"></script>
+    <script src="Home.js"></script>
+</body>
+</html>

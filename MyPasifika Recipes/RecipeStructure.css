@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  #myDIV {
+       height:300px;
+        background-color:#FFFFFF;
+  }
+  
+  .p1 {
+    background-color: lightblue;
+    width: auto;
+    height: 300px;
+    overflow:auto;
+    }
+    
+  img{
+  border-radius: 50%;
+  }
+  
+  .h2 {
+      border: solid black 1px;
+      text-align: center;
+      }
+      
+  .h3 {
+    text-align: center;
+    }
+    
+    .button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    
+  .button2 {background-color: #008CBA;} /* Blue */
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left middle middle middle middle right' 
+      'footer footer footer footer footer footer';
+    grid-column-gap: 10px; 
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 6%;
+    margin-top: 7%;
+    border-style: none ;
+    width: 100%; /* or use a specific width, like 80% or 1200px */
+    max-width: 1200px; /* optional: set a max width */
+  height: auto;
+  } 
+  
+  .grid-container li {
+border-style: outset;
+text-align: center;
+list-style: none;
+margin-top: 5%;
+
+  }
+  .left,
+  .middle,
+  .right {
+    padding: 5px;
+    height: auto; /* Should be removed. Only for demonstration */
+    border: solid black 1px;
+    
+  
+  }
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+    border: none;
+    
+    
+     
+  }
+  
+  /* Style the middle column */
+  .middle li {
+    grid-area: middle;
+    border-style: none;
+    text-align: left;
+
+  }
+
+  .middle p ul {
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+    border-style: none;
+    }
+  
+  img {
+  border-radius: 70%;
+  }
+  
+  .img1 {
+    border: solid black 1px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
+  
