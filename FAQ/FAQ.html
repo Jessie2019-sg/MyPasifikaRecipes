@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="search.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+    margin: 0;
+        }
+
+            .faq-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centers FAQ section horizontally */
+    margin-top: 10%;
+}
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007acc; /* Changed to blue */
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-block {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-block:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-block h3 {
+            font-size: 1.5rem;
+            color: #007acc;
+            margin-bottom: 15px;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            color: black; /* Changed to black */
+            font-size: 1.1rem;
+            margin: 0;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #005f99;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007acc;
+            font-size: 0.95rem;
+            color: black; /* Changed to black */
+            border-radius: 5px;
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="FAQ.html">FAQ?</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+    <button class = "image-button"  id="adminBtn"></button>
+    </li> <!-- Admin button -->
+    </ul>
+    </nav>  
+    </div>
+    <body>
+        <ul class="breadcrumb" style = "color: black;">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Recipes.html">Recipes</a></li>
+            <li><a href="Review.html">Table Talk</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li>FAQ</li>
+          </ul>
+        
+    </header>
+        <!-- Popup Form -->
+    <div id="loginPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Admin Login</h2>
+        <form method="POST" action="AdminLogin.php">
+        <label for="email">Email</label>
+        <input type="email" name="email" required placeholder="Email">
+        <label for="password">Password</label>
+        <input type="password" name="password" required placeholder="Password">
+        <button type="submit">Login</button>
+        </form>
+        </div>
+        </div>
+    
+       
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-grid">
+            <div class="faq-block">
+                <h3>Recipe-Related Topics</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>What if my recipe requires uncommon ingredients?</strong></h4>
+                    <div class="faq-answer">
+                        <p>It is helpful to suggest possible substitutes for uncommon ingredients in the instructions to make the recipe accessible to a wider audience.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How are recipes reviewed for quality and accuracy?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Our team reviews each submitted recipe based on clarity, ingredient availability, and adherence to our submission guidelines before approval.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Are there nutritional information requirements for submitted recipes?</strong></h4>
+                    <div class="faq-answer">
+                        <p>While not mandatory, we encourage you to include nutritional information to help users make informed choices.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>What should I do if I find a recipe that doesn't work?</strong></h4>
+                    <div class="faq-answer">
+                        <p>If you encounter a recipe that seems incorrect or doesn't work as intended, please report it using the feedback option, and we will investigate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <h3>User Interaction</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How can I submit a recipe on MyPasifikaRecipes?</strong></h4>
+                    <div class="faq-answer">
+                        <p>To submit a recipe, go to the "Submit Recipe" page and complete all mandatory fields, including recipe name, ingredients, and instructions.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Will I receive confirmation after submitting a recipe?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Yes, after submitting your recipe, you will receive a confirmation message.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>What information is required when submitting a review?</strong></h4>
+                    <div class="faq-answer">
+                        <p>You must provide a rating (1-5 stars) and a written review in the mandatory fields.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <h3>Search & Ratings</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How does the search functionality work?</strong></h4>
+                    <div class="faq-answer">
+                        <p>The search functionality allows users to find recipes or specific content by entering keywords in the search bar.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How can I rate a recipe on MyPasifikaRecipes?</strong></h4>
+                    <div class="faq-answer">
+                        <p>To rate a recipe, go to the specific recipe page and select a rating between 1 to 5 stars.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Will my rating be visible to others?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Yes, your rating will be visible to other users, and the average rating for each recipe will be updated accordingly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <h3>General Questions</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Is there a mobile app for MyPasifikaRecipes?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Currently, we only offer a web version, but we are considering developing a mobile app in the future.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How can I contact customer support?</strong></h4>
+                    <div class="faq-answer">
+                        <p>You can contact our customer support team via the "Contact Us" page on the website.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Can I share my recipes on social media?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Yes, you can share your recipes on various social media platforms directly from the recipe page.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How can I find recipes on the platform?</strong></h4>
+                    <div class="faq-answer">
+                        <p>You can find recipes by using the search functionality or by browsing through different categories available on the website.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Are there any subscription fees to use MyPasifikaRecipes?</strong></h4>
+                    <div class="faq-answer">
+                        <p>No, MyPasifikaRecipes is completely free to use for all users.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <h3>Recipe Management</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>What types of recipes can I submit?</strong></h4>
+                    <div class="faq-answer">
+                        <p>You can submit any type of recipe, including appetizers, main courses, desserts, and beverages. Just ensure that it follows our submission guidelines.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Is there a limit to the number of ingredients I can include?</strong></h4>
+                    <div class="faq-answer">
+                        <p>There is no strict limit, but we recommend keeping the ingredient list concise to ensure clarity and ease of preparation for users.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Can I upload images along with my recipe?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Yes, you can upload images when submitting your recipe to enhance its presentation.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How long does it take for my recipe to be approved?</strong></h4>
+                    <div class="faq-answer">
+                        <p>Typically, it takes 1-3 business days for your recipe to be reviewed and approved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <h3>User Experience</h3>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>How can I provide feedback on the website?</strong></h4>
+                    <div class="faq-answer">
+                        <p>You can provide feedback by filling out the feedback form available on the "Contact Us" page.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>What should I do if I encounter a technical issue?</strong></h4>
+                    <div class="faq-answer">
+                        <p>If you encounter any technical issues, please reach out to our customer support for assistance.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <h4 class="faq-question"><strong>Is there a limit to how many reviews I can submit?</strong></h4>
+                    <div class="faq-answer">
+                        <p>No, there is no limit to the number of reviews you can submit. Feel free to share your thoughts on as many recipes as you like!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+   
+    <footer>
+        <div class="container">
+        <p> Contact Us Through </br>
+        Email: </br>
+        Phone: 
+        </p>
+        <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+        <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+        <img src="Images/Facebook.png" alt="Facebook Icon">
+        </a></p>
+        <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Instagram">
+        <img src="Images/instagram.png" alt="Instagram Icon">
+        </a></p>
+        <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Twitter">
+        <img src="Images/Twitter.png" alt="Twitter Icon">
+        </a></p>
+        </div>
+        </footer>
+    </section>
+    <script src="search.js"></script>
+<script src="AdminLogin.js"></script>
+<script src="Home.js"></script>
+</body>
+</html>
