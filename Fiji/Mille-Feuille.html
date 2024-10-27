@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Pacifika Recipe - Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="RecipeStructure.css">
+    <link rel="stylesheet" href="RecipeCat.css">
+</head>
+<body>
+<!-- Header Section -->
+<<!-- Header Section -->
+<header>
+    <div class="container">
+    <nav>
+    <ul class="nav">
+    <img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+    <h1 class = "logo">My Pacifika Recipe</h1>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+        <img src="Images/Search.png" alt="Search Icon">
+    </a>
+    </li>
+    <script>
+    // Function to open the search page with the query
+    function openSearchPage() {
+    const query = prompt("Enter a recipe to search for:");
+    if (query) {
+    // Redirect to search.html with the query as a URL parameter
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+    }
+    </script>
+    <li>
+    <button class = "image-button"  id="adminBtn"></button>
+    </li> <!-- Admin button -->
+    </ul>
+    </nav>  
+    </div>
+    </header>
+
+<div class="grid-container">
+<div class="header">
+</div>
+        
+<div class="left" >
+<h4> Categories: </h4>
+<ul>
+<li><a href="Cook Island.html">Cook Islands</a></li>
+<li><a href="Fiji.html">Fiji</a></li>
+<li><a href="Kiribati.html">Kiribati</a></li>
+<li><a href="Marshall Islands.html">Marshall Islands</a></li>
+<li><a href="Nauru.html">Nauru</a></li>
+<li><a href="Niue.html">Niue</a></li>
+<li><a href="Samoa.html">Samoa</a></li>
+<li><a href="Solomon Islands.html">Solomon Islands</a></li>
+<li><a href="Tonga.html">Tonga</a></li>
+<li><a href="Tuvalu.html">Tuvalu</a></li>
+<li><a href="Vanuatu.html">Vanuatu</a></li>
+<li><a href="Papua New Guinea.html">Papua New Guinea</a></li>
+</ul>
+<a href="RecipeSubmission.html" class="cta-btn">Share Recipes</a>
+</div>
+            
+<div class="grid-container">
+<div class="middle" style="background-color:#bbb;">
+<h2 class="h2">Mille-Feuille (Pacific Style)</h2>
+<div id="myDIV">
+<div class="p1">
+<h4>Ingredients:</h4>
+<p>
+<ul>
+<li>Puff pastry sheets</li>
+<li>2 cups custard (prepared or store-bought)</li>
+<li>1 cup whipped cream</li>
+<li>1cup whole milk </li>
+<li>Fresh tropical fruits (e.g., mango, pineapple, papaya)</li>
+<li>Powdered sugar for dusting</li>
+</ul>
+</p>
+</br>
+<h4>Instructions:</h4>
+<ul>
+<li>1.	Bake puff pastry sheets according to package instructions until golden and crispy.</li>
+<li>2.	Let the pastry cool, then layer custard, whipped cream, and fruits between pastry layers.</li>
+<li>3.	Top with a final pastry layer and dust with powdered sugar. Chill before serving.</li>
+</ul>
+</div>
+</div>
+</div>  
+</div>
+        <div class="right">
+            <h3>Shopping List</h3>
+            <p>This is the image of the relevant recipe</p>
+            
+            <button class="button button2" id="shopButton"> Display Shopping List </button> <br/>
+            <script>
+                // Show/Hide Shopping List when button is clicked
+                document.getElementById("shopButton").addEventListener("click", function() {
+                    var shoppingListContainer = document.getElementById("shoppingListContainer");
+                    
+                    // Toggle display
+                    if (shoppingListContainer.style.display === "none") {
+                        shoppingListContainer.style.display = "block";
+                        
+                        // Fetch shopping list items via AJAX (you can replace this with a real API)
+                        fetch('ShoppingList.php')
+                        .then(response => response.text())
+                        .then(data => {
+                            // Insert data into shopping list
+                            document.getElementById("shoppingList").innerHTML = data;
+                        });
+                    } else {
+                        shoppingListContainer.style.display = "none";
+                    }
+                });
+            </script>
+            <div id="shoppingListContainer" style="display:none;">
+                <h4>Your Shopping List:</h4>
+                <ul id="shoppingList">
+                    
+                    <!-- Shopping list content will be populated here -->
+                </ul>
+            </div>
+
+            <div>
+                <img class="img1" src="Images/Poke.jpeg" alt="Poke" />
+            </div>
+        </div>
+    </div>
+     </div> 
+    <!-- Footer Section -->
+<footer>
+    <div class="container">
+    <p> Contact Us Through </br>
+    Email: </br>
+    Phone: 
+    </p>
+    <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+    <img src="Images/Facebook.png" alt="Facebook Icon">
+    </a></p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Instagram">
+    <img src="Images/instagram.png" alt="Instagram Icon">
+    </a></p>
+    <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Twitter">
+    <img src="Images/Twitter.png" alt="Twitter Icon">
+    </a></p>
+    </div>
+    </footer>
+    
+   
+</body>
+</html>
