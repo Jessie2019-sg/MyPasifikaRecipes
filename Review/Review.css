@@ -7,7 +7,7 @@
   padding: 20px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 5%;
+  margin-top: 2%;
   height: 100%;
 }
 
@@ -240,7 +240,7 @@ height: 100%;
 }
 
 .submit-button,
-.rate-button {
+.Rate-button {
   padding: 10px 20px;
   width: 100%;
   background-color:  #e65c00;
@@ -252,7 +252,7 @@ height: 100%;
 }
 
 .submit-button:hover,
-.rate-button:hover {
+.Rate-button:hover {
   opacity: 0.8;
 }
 
