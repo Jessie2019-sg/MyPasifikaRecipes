@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Pacifika Recipe - Home</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="AdminLogin.css">
+    <link rel="stylesheet" href="Breadcrumb.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+<div class="container">
+<nav>
+<ul class="nav">
+<img class = "imglogo" src="Images/Blue Elegant Initial B Butterfly Logo .png" alt="Search Icon">
+<h1 class = "logo">My Pacifika Recipe</h1>
+<li><a href="Home.html">Home</a></li>
+<li><a href="Recipes.html">Recipes</a></li>
+<li><a href="Review.html">Table Talk</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="FAQ.html">FAQ?</a></li>
+<li><a href="#" class="search-icon" title="Search" onclick="openSearchPage()">
+    <img src="Images/Search.png" alt="Search Icon">
+</a>
+</li>
+<script>
+// Function to open the search page with the query
+function openSearchPage() {
+const query = prompt("Enter a recipe to search for:");
+if (query) {
+// Redirect to search.html with the query as a URL parameter
+window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+}
+}
+</script>
+<li>
+<button class = "image-button"  id="adminBtn"></button>
+</li> <!-- Admin button -->
+</ul>
+</nav>  
+</div>
+<ul class="breadcrumb" style = "color: black;">
+    <li>Home</li>
+    <li><a href="Recipes.html">Recipes</a></li>
+    <li><a href="Review.html">Table Talk</a></li>
+    <li><a href="About.html">About Us</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+  </ul>
+</header>
+<!-- Main Banner Section -->
+<section class="hero">
+    
+<div class="hero-content">
+    
+<h2>Discover Authentic Pacific Cuisine</h2>
+<p>Explore recipes from across the Pacific islands and bring the flavors of the ocean to your kitchen.</p>
+<a href="Recipes.html" class="cta-btn">Explore Recipes</a>
+</div>
+</section>
+
+<!-- Popup Form -->
+<div id="loginPopup" class="popup" style="display: none;">
+<div class="popup-content">
+<span class="close-btn">&times;</span>
+<h2>Admin Login</h2>
+<form method="POST" action="AdminLogin.php">
+<label for="email">Email</label>
+<input type="email" name="email" required placeholder="Email">
+<label for="password">Password</label>
+<input type="password" name="password" required placeholder="Password">
+<button type="submit">Login</button>
+</form>
+</div>
+</div>
+
+    <!-- Featured Recipes Section -->
+<section class="featured-recipes">
+<h1 style="text-align: center;"> Trending Today </h1>
+<div class="container">        
+<div class="recipe-grid">
+<div class="recipe-item">
+<img src="Images/Fijian Cuisine Kokonda.jpg" alt="Fijian Cuisine Kokonda" style="width:100%; border-radius: 10px;">
+<h4>Kokoda (Fijian Ceviche)</h4>
+<p>A fresh and zesty dish made with marinated fish, coconut milk, and lime.<a href="Fiji.html">See more..</a></p>
+</div>
+<div class="recipe-item">
+<img src="Images/Samoan Palusami.jpg" alt="Palusami (Samoan Taro Leaves)" style="width:100%; border-radius: 10px;">
+<h4>Palusami (Taro Leaves in Coconut Cream)</h4>
+<p>A traditional Samoan dish with taro leaves cooked in creamy coconut milk.<a href="Palusami.html">See more..</a></p>
+</div>
+<div class="recipe-item">
+<img src="Images/IMG-fa61e73bd44ffae35f0222cede170f8d-V.jpg" alt="Poi (Hawaiian Taro)" style="width:100%; border-radius: 10px;">
+<h4>Poi (Hawaiian Taro)</h4>
+<p>A staple Polynesian food made from taro root, known for its smooth and unique flavor.<a href="Recipes.html">See more..</a></p>
+</div>
+<div class="recipe-item">
+<img src="Images/Lemon Chicken.jpg" alt="Lemon Chicken" style="width:100%; border-radius: 10px;">
+<h4>Lemon Chicken</h4>
+<p>Tangy however, flavourful<a href="Recipes.html".html">See more..</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+<div class="container">
+<p> Contact Us Through </br>
+Email: 
+</p>
+<p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
+<p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
+<img src="Images/Facebook.png" alt="Facebook Icon">
+</a></p>
+<p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fmypasifikarecipes%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1VmYvhk6kI4EogYN5XJiYfYIuiu9TX8gvP2k4Ullr7nvRniOgDTZzRS3U_aem_3wAbpgBgyXXofN7rTfElww&h=AT2s1aPHkBWx91JxF92v6cuOFPSbIiByVq7jWSV0gVqK2S9zkFDPqiJofCyDt3re8HKCAmqybn8uq7HmsdJVQsXiVzC3TalTrvuXYhTL4atB3x_nPPRkeIGQET_l4fSgM4_YFA" class="search-icon" title="Instagram">
+<img src="Images/instagram.png" alt="Instagram Icon">
+</a></p>
+</div>
+</footer>
+
+
+
+<!-- Move the script to the end of the body -->
+<script src="search.js"></script>
+<script src="AdminLogin.js"></script>
+<script src="Home.js"></script>
+
+
+</body>
+</html>
