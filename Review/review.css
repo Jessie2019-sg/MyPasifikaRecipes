@@ -14,8 +14,9 @@
 /* Left column: Feedback form styles */
 .feedback-form {
   flex: 1;
+  border: 1px groove #ccc;
   width: 50%;
-  height: 100%;
+   height: 400px;
   max-width: 600px; /* Constrain the width of the feedback form */
   margin-right: 20px; /* Space between left and right columns */
   padding: 20px; /* Add padding for form */
@@ -31,17 +32,18 @@
 
 .feedback-form input,
 .feedback-form textarea {
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
+   width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn’t increase width */
 }
 
 .submit-button,
 .rate-button {
   padding: 10px 20px;
+  width: 100%;
   background-color:  #e65c00;
   color: white;
   border: none;
@@ -52,7 +54,7 @@
 
 .submit-button:hover,
 .rate-button:hover {
-  background-color:  #e65c00;
+  opacity: 0.8;
 }
 
 /* Right column: Reviews section styles */
@@ -60,9 +62,9 @@
   flex: 1; /* Allow the reviews container to take the remaining space */
   max-width: 400px; /* Constrain the width of the reviews section */
   padding: 20px; /* Add padding */
-  height: 100%; /* Set a fixed height for the container */
+   height: 400px; /* Set a fixed height for the container */
   overflow-y: scroll; /* Enable vertical scrolling */
-  border: 1px solid #ccc; /* Optional: add a border */
+  border:1px groove #ccc; /* Optional: add a border */
   background-color: #f9f9f9; /* Optional: background color */
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
@@ -76,7 +78,7 @@
   padding: 20px; /* Add padding */
   height: 100%; /* Set a fixed height for the container */
   overflow-y: scroll; /* Enable vertical scrolling */
-  border: 1px solid #ccc; /* Optional: add a border */
+  border: 1px groove #ccc; /* Optional: add a border */
   background-color: #f9f9f9; /* Optional: background color */
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
@@ -194,3 +196,249 @@ height: 100%;
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Container for the forms */
+.Revcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 5%;
+  height: 100%;
+}
+
+/* Left column: Feedback form styles */
+.feedback-form {
+  flex: 1;
+  border: 1px groove #ccc;
+  width: 50%;
+   height: 400px;
+  max-width: 600px; /* Constrain the width of the feedback form */
+  margin-right: 20px; /* Space between left and right columns */
+  padding: 20px; /* Add padding for form */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 30%
+}
+
+.feedback-form input,
+.feedback-form textarea {
+   width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn’t increase width */
+}
+
+.submit-button,
+.rate-button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color:  #e65c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.rate-button:hover {
+  opacity: 0.8;
+}
+
+/* Right column: Reviews section styles */
+.reviews-container {
+  flex: 1; /* Allow the reviews container to take the remaining space */
+  max-width: 400px; /* Constrain the width of the reviews section */
+  padding: 20px; /* Add padding */
+   height: 400px; /* Set a fixed height for the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border:1px groove #ccc; /* Optional: add a border */
+  background-color: #f9f9f9; /* Optional: background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  gap: 10%;
+  margin-right: 2%;
+}
+
+.ratings-container {
+  flex: 1; /* Allow the ratings container to take the remaining space */
+  max-width: 400px; /* Constrain the width of the ratings section */
+  padding: 20px; /* Add padding */
+  height: 100%; /* Set a fixed height for the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border: 1px groove #ccc; /* Optional: add a border */
+  background-color: #f9f9f9; /* Optional: background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+
+.reviews-container h2 {
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Star Ratings Section */
+.rating-section {
+  max-height: 150px; /* Set a max height for the ratings section */
+  overflow-y:scroll; /* Enable vertical scrolling */
+  margin-bottom: 20px; /* Space between ratings and reviews */
+height: 100%;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.review-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-date {
+  font-size: 14px;
+  color: #777; /* Light gray color */
+  margin-top: 5px; /* Space above the date */
+}
+
+.review-message {
+  margin: 0;
+}
+
+/* Star rating styles */
+.star-rating {
+  display: inline-block;
+  direction: rtl; /* Right-to-left, so the stars appear in reverse order */
+}
+
+.star-rating input {
+  display: none; /* Hide the radio inputs */
+}
+
+.star-rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+  color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+.review-rating {
+  font-size: 24px; /* Adjust as needed */
+}
+
+.filled-star {
+  color: gold; /* Color for filled stars */
+}
+
+.empty-star {
+  color: lightgray; /* Color for empty stars */
+}
+
+/* Style for the modal pop-up */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+  .Revcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback-form, .reviews-container, .ratings-container {
+    width: 90%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .feedback-form, .reviews-container, .ratings-container {
+    height: auto; /* Let containers expand with content */
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {
+  .Revcontainer {
+    padding: 10px;
+    margin-top: 2%;
+  }
+
+  .feedback-form, .reviews-container, .ratings-container {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .submit-button, .rate-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .star-rating label {
+    font-size: 24px; /* Smaller stars for mobile */
+  }
+  
+  .modal-content {
+    width: 80%; /* Make modal smaller on mobile */
+  }
+}
+
