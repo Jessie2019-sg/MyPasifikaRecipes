@@ -163,7 +163,7 @@ window.location.href = `search.html?query=${encodeURIComponent(query)}`;
 <footer>
 <div class="container">
 <p> Contact Us Through </br>
-Email: 
+Email: mypasifikarecipes11@gmail.com
 </p>
 <p>&copy; 2024 My Pacifika Recipe. All rights reserved.</p>
 <p><a href="https://www.facebook.com/profile.php?id=61566357703217" class="search-icon" title="Facebook">
